@@ -1,0 +1,556 @@
+@charset "UTF-8";
+
+body {
+  /*caminho e propriedade da imagem errados*/
+  background-image: url("../img/background.jpg"); /*inserção da imagem de fundo em todo o site*/
+  color: #868686; /*cor padrão para todas as fontes*/
+  font-family: 'Open Sans', Helvetica, sans-serif, arial;/*definição da fonte geral incorporada do Google Fonts*/
+  font-size: 1.125em; /* 18px / 16px = 1.125em */ /*tamanho da fonte*/
+  font-weight: 300; /*indica que a fonte está configurada como open Sans Light*/
+  line-height: 1.222em; /* 22px / 18px = 1.222em */ /*altura da linha*/
+  text-align: left; /*alinhando o text à esquerda*/
+  text-shadow: 1px 1px 0px #fff; /*sombreamento para as fontes do site na cor branca*/
+}
+.center {
+  margin: 0 auto; /*centralizando o conteúdo no navegador*/
+  width: 1200px; /*largura do layout*/
+  width: 90%; /*ajuste do layout à tela*/
+}
+/*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos,
+  evitando que os floats se aglomerem
+*/
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*fim do clearfix*/
+
+img, picture, video, embed {
+  max-width: 100%; /*define a largura máxima em até 100%*/
+}
+h1, h2 {
+  color: #FE9380; /*cor das letras de cabeçalho de nivel 1 e 2*/
+  font-size: 60px; /*tamanho da fonte*/
+  font-weight: 800; /*espessura da fonte (negrito)*/
+  letter-spacing: -3px; /*espaçamento entre as letras*/
+  line-height: 60px; /*altura das linhas (espaçamento entre as linhas ou kerning)*/
+}
+h3 {
+  font-size: 32px; /*tamanho da fonte*/
+  font-weight: 300; /*espessura da fonte (negrito)*/
+  letter-spacing: -2px; /*espaçamento entre as letras*/
+  line-height: 38px; /*altura das linhas (espaçamento entre as linhas ou kerning)*/
+}
+p {
+  font-weight: 300; /*espessura da fonte (negrito)*/
+  letter-spacing: -1px; /*espaçamento entre as letras*/
+}
+a, a:link, a:visited {
+  color: #FE9380; /*cor dos links*/
+  font-weight: 400; /*modifica a espessura da fonte para "semi-bold"*/
+  text-decoration: none; /*retira o sublinhado dos links*/
+}
+a:hover {
+  color: #FE5E41; /*cor dos links no momento em que o mouse passa por cima dele*/
+  text-decoration: underline; /*insere uma linha sob o link quando passar o mouse*/
+  text-shadow: none; /*retira a sombra da fonte quando passar o mouse*/
+}
+
+/*Seção HEADER - borda, altura e largura*/
+header {
+  border-bottom: 1px solid #E0E0E0;
+  height: 150px;
+  width: 100%; /*1200px / 1200px = 1 x 100 = 100%*/ /*largura do topo*/
+}
+/*logotipo*/
+header h1 a{
+  background: url("../img/logo-criar-site-responsivo.png") no-repeat; /*logotipo*/
+  display: block; /*torna o link como um bloco à esquerda do site*/
+  float: left; /*posiciona o logotipo à esquerda do site*/
+  height: 139px; /*altura da imagem*/
+  /*valor mínimo para indentação é 0, não -9999*/
+  text-indent: 0; /*recuo para ocultar texto à esquerda*/
+  width: 25.166666666667%; /* 302px / 1200px = 0.25166666666667 x 100 = 25.16666666666667*/ /*largura da imagem*/
+}
+
+/*nav - menu de navegação*/
+nav {
+  float: right; /*posiciona menu à direita*/
+  margin-top: 78px; /*distância do menu à margem superior do navegador*/
+  text-align: right; /*alinha os links à direita*/
+  /* valor errado corrigido*/
+  width: 60.66666666667%; /* 800px / 1200px = 0.4083333333333333 x 100 = 40.83333333333333% */ /*largura da seção*/
+}
+nav ul {
+  list-style-type: none; /*retira os marcadores da lista*/
+}
+nav li {
+  display: inline; /*deixa o menu na horizontal*/
+}
+nav ul li a {
+  margin-right: 30px; /*espaço à direita de cada link do menu*/
+}
+nav ul li:nth-child(5) a {
+  margin-right: 0px; /*indica que o 5° elemento da lista (contato) terá a margem a direita zerada*/
+}
+nav a:link, nav a:visited {
+  color: #999; /*muda a cor da fonte*/
+  font-size: 22px; /*altera o tamanho da fonte*/
+  font-weight: 300; /*modifica a espessura da fonte para light*/
+  letter-spacing: -2px; /*espaçamento entre as letras*/
+  line-height: 26px; /*kerning da linha*/
+  display: inline-block; /*links um ao lado do outro*/
+}
+nav a.ativo:link, nav a:hover {
+  color: #FE9380; /*indica a página ativa e o link:hover*/
+}
+/*Seção .CHAMADA*/
+.chamada {
+  height: 290px; /*altura do bloco*/
+  text-align: center; /*centralizando o texto*/
+  /*largura alterada para 100%*/
+  width: 100%; /*1200px / 1200px = 1 x 100 = 100% */ /*definindo a largura*/
+}
+.chamada h2 span {
+  font-size: 60px; /*difinindo um tamanho de fonte diferenciado*/
+  font-weight: 300; /*suavizando a força das letras*/
+  letter-spacing: -2px; /*espaçamento entre as letras*/
+  line-height: 60px; /*altura da linha*/
+}
+.chamada h3 {
+  margin: 0 auto; /*defindo a margem de cabeçalhos de nivel 3*/
+  width: 75%; /* 900px / 1200px = 0.75 x 100 = 75% */ /*difinindo uma largura fixa*/
+}
+
+/*Seção .CONTAINER - conteúdo com 3 colunas*/
+.container {
+  background-color: #FE9481; /*cor do plano de fundo da div*/
+  height: 457px; /*altura do bloco*/
+  padding: 2.5%; /*espaçamento interno maior*/
+  width: 95%; /* 1200px / 1200px = 1 x 100 = 100% - 5% de padding = 95% */ /*largura do bloco*/
+  max-width: 1200px; /*largura máxima do bloco*/
+  margin:auto;
+}
+.desktop, .tablet, .mobile { /*DEFINIÇÃO DOS BLOCOS DE TEXTO UM AO LADO DO OUTRO*/
+  float: left; /*define o posicionamento do bloco para cia e esquerda*/
+  position: relative; /*posicionamento responsivo*/
+  text-align: center; /*alinhamento do texto centralizado*/
+  width: 31.57894736842105%; /* 360px / 1140 = 0.3157894736842105 x 100 =  31.57894736842105% */ /*largura dos blocos*/
+}
+.desktop, .tablet {
+  margin-right: 2.631578947368421%; /* 30px / 1140px = 0.02631578947368421 x 100 = 2.631578947368421%*/ /*espaçamento entre os blocos*/
+}
+.mobile {
+  background-color: #9C8CB9; /*muda a cor de fundo do bloco mobile*/
+  margin-right: 0px; /*margem da direita definida*/
+}
+.desktop {
+  background-color: #FE9481; /*muda a cor de fundo do bloco desktop*/
+}
+.tablet {
+  background-color: #FCDA92; /*muda a cor de fundo do bloco tablet*/
+}
+
+/*imagens*/
+.container figure {
+  margin: 10px auto 0px auto; /*definição das margens das imagens*/
+  text-align: center; /*alinhamento centralizado*/
+  width: 250px; /*largura*/ /*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
+}
+img {
+  max-width: 100%; /*define a largura máxima em até 100%*/
+}
+.container .desktop figure, .container .tablet figure,.container .mobile figure {
+  width: 69.44444444444444%; /* 250px / 360px = 0.6944444444444 x 100 = 69.44444444444444%*/
+}
+/*formatação do texto*/
+.container h3 {
+  color: #fff; /*cor da letra branca*/
+  font-size: 32px; /*tamanho da letra*/
+  margin-top: 10px;
+  font-weight: 300; /*definição da espessura da fonte*/
+  letter-spacing: -2px; /*espaçamento entre as letras*/
+  margin-bottom: 30px; /*espaçamentoda margem inferior*/
+  text-shadow: none; /*remoção do sombreamento das letras*/
+}
+.container p {
+  background-color: #fff; /*cor do fundo dos parágrafos*/
+  float: left; /*posicionamento dos parágrafos*/
+  height: 200px; /*definição da altura dos parágrafos*/
+  padding: 7px; /*definição da margem interna dos parágrafos*/
+  margin-top: 0;
+  position: absolute; /*posicionamento fixo dos parágrafos*/
+  max-width: 100%; /*largura máxima*/
+  text-align: justify; /*alinhamento justificado*/
+  top: 225px; /*definição da margem do topo*/
+}
+
+/*formatação do botão*/
+span.btn { /*definição dos links "leia mais"*/
+  font-size: 20px; /*tamanho da fonte*/
+  font-weight: 400; /*espessura da fonte*/
+  letter-spacing: -2px; /*espaçamento das letras*/
+  height: 27px; /*altura das letras*/
+  margin-top: 30px; /*margem superior*/
+  position: absolute; /*posicionamento fixo*/
+  right: 1px; /*espaçamento à direita*/
+  text-align: center; /*alinhamento centralizado*/
+  text-shadow: none; /*sem sombreamento nas letras*/
+  width: 120px; /*largura do span*/
+}
+span.btn a {
+  color: #fff; /*definição da cor da fonte*/
+  padding: 2px 4px; /*espaçamento interno*/
+}
+/*definição da cor de fundo de cada link "leia mais"*/
+.desktop span.btn a {
+  background-color: #FE9481;
+}
+.tablet span.btn a {
+  background-color: #FCDA92;
+}
+.mobile span.btn a {
+  background-color: #9C8CB9;
+}
+
+/*Seção FOOTER - Rodapé com duas colunas*/
+footer {
+  clear: both; /*define o posicionamento*/
+  height: 50px; /*altura*/
+  padding: 10px 0px; /*espaçamento interno*/
+  /* valor alterado para porcentagem*/
+  width: 100%; /*largura*/
+}
+.copyright {
+  float: left; /*posicionamento acima e à esquerda*/
+  margin-left: 30px; /*margem esquerda*/
+}
+.desenvolvedor { /*posicionamento do logo*/
+  float: right;
+  margin-right: 30px;
+}
+.desenvolvedor figure { /*largura do logo*/
+  width: 182px;
+}
+/*1200px - DESKTOPS, NOTEBOOKS COM MONITORES WIDESCREEN
+*********************************************************************/
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 1.1em;
+  }
+  .chamada h3 {
+    font-size: 1.4em; /* 30px / 18px */
+  }
+  .container h3 {
+    font-size: 1.4em; /* 28px / 18px */
+  }
+  .container p {
+    height: 170px;
+    font-size: 0.78em;
+    top: 217px;
+  }
+}
+/*960px - TABLETS NO FORMATO PAIAGEM E ALGUNS MONITORES MAIS ANTIGOS
+**********************************************************************/
+@media screen and (max-width: 960px) {
+  header h1 a {
+    width: 37.5%; /* 360px / 960px */
+  }
+  nav {
+    width: 62.5%; /* 600px / 960px */
+  }
+  h2 {
+    font-size: 2em; /* 48px / 18px */
+  }
+  /* chamada */
+  .chamada h3 {
+    font-size: 1.2em; /* 27px / 18px */
+    width: 88.541666666666667%;
+  }
+  .chamada h2 span {
+    font-size: 40px;
+  }
+  /* container */
+  .container {
+    padding: 3.125%; /* 30px / 960px */
+    width: 93.75%; /* 100% (960px) - 6.25% de padding (direita e esquerda) = 92.1875%*/
+  }
+  .desktop, .tablet, .mobile {
+    width: 31.45833333333%; /* 302px / 960px */
+  }
+  .container .desktop figure, .container .tablet figure, .container .mobile figure {
+    width: 66.22516556291391% /* 200px / 302px */
+  }
+  .container img {
+    height: 100px;
+  }
+  .container h3 {
+    font-size: 1.66666666667em; /* 30px / 18px */
+  }
+  .container p {
+    font-size: 0.75em; /* 15px / 18px */
+    height: 200px;
+    top: 245px;
+  }
+}
+/*768px - TABLETS NO FORMATO RETRATO, COMO O IPAD
+**********************************************************************/
+@media screen and (max-width: 768px) {
+  /*cores dos links e h2*/
+  h2, a, a:link, a:visited {
+    color: #FBCA61;
+  }
+  a:hover {
+    color: #F9AD0F;
+  }
+  /*header*/
+  header{
+    height: 195px;
+    text-align: center;
+  }
+  header h1 a {
+    background-position: 57% 0;
+    height: 126px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  nav {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  nav a.ativo:link, nav a:hover{
+    color: #FBCA61;
+  }
+  /* chamda */
+  .chamada{
+    height: 250px;
+  }
+  h2 {
+    font-size: 1.8em; /* 40px / 18px */
+    margin-bottom: 5px;
+  }
+  .chamada h3 {
+    font-size: 1.11111111111em; /* 20px / 18px */
+  }
+  /*container*/
+  .container {
+    background-color: #FCDA92;
+    height: 550px;
+    padding:  3.90625%; /* 30px / 768 = 0. */
+    width: 92.1875%; /* 100% (768px) - 7.8125% de padding (direita e esquerda) = 92.1875% */
+  }
+  .desktop, .tablet, .mobile {
+    width: 31.25%; /* 240px / 768px */
+  }
+  .container .desktop figure, .container .tablet figure, .container .mobile figure {
+    width: 66.22516556291391%; /* 200px / 302px */
+  }
+  .container img {
+    height: 80px;
+  }
+  .container h3 {
+    font-size: 1.5em; /* 30px / 18px */
+  }
+  .container p {
+    font-size: 0.77777777778em; /* 14px / 18px */
+    height: 290px;
+    line height: 1.1428571428em; /* 16px / 14px */
+    padding: 2.916666666667%; /* 7px / 240px */
+    top: 235px;
+  }
+  span.btn {
+    font-size: 1.11111111111em; /* 20px / 18px = 1.11111111111em */
+    letter-spacing: -0.1em; /* -2px / 20px = -0.1em */
+    height: 22px;
+    margin-top: 40px;
+    position: absolute;
+    width: 50%;
+  }
+  span.btn a {
+    padding: 2px 3.3333333333333%; /* 4px / 120px */
+  }
+}
+/*480px - TABLETS NO FORMATO RETRATO, COMO O IPAD
+**********************************************************************/
+@media screen and (max-width: 480px) {
+  /*geral*/
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .center {
+    width: 100%;
+  }
+  /*cores dos links e H2*/
+  h2, a a:link, a:visited {
+    color: #9C8CB9;
+  }
+  a:hover {
+    color: #745F9A;
+  }
+  /*header*/
+  header {
+    border-bottom: none;
+    height: auto;
+    text-align: center;
+  }
+  header h1 a {
+    background-position: 50% 0;
+    display: inherit;
+    height: 126px;
+    width: 100%;
+  }
+  /*manu nav*/
+  nav {
+    clear: both;
+  }
+  nav li {
+    background-color: #9C8CB9;
+    display: block;
+  }
+  nav li a {
+    height: 40px;
+    margin: 0;
+    padding-top: 3px;
+    text-align: center;
+    text-shadow: none;
+    width: 100%;
+  }
+  nav li a:link {
+    color: #fff;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  nav li a.ativo:link, nav li a:hover, nav li a:visited {
+    background-color: #745F9A;
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+  }
+  nav li a.ativo:hover, nav li a.ativo:visited {
+    background-color: #9C8CB9;
+  }
+  /*chamada*/
+  .chamada {
+    height: 130px;
+    margin-top: 25px;
+  }
+  h2 {
+    font-size: 1.4444444444em; /* 26px / 18px */
+    letter-spacing: -0.0769230769230769em;
+    margin-bottom: 15px;
+  }
+  .chamada h2 span {
+    font-size: 1.1em;
+  }
+  .chamada h3 {
+    display: none;
+    font-size: 0.77777777778em;
+  }
+  /*container*/
+  .container {
+    background-color: #9C8CB9;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  .container .desktop, .container .tablet, .container .mobile {
+    float: none;
+    height: 160px;
+    width: 100%;
+  }
+  .container .desktop figure, .container .tablet figure, .container .mobile figure {
+    float: left;
+    height: 160px;
+    margin: 0;
+    padding: 0;
+    width: 53.125%;
+  }
+  .container h3 {
+    float: left;
+    margin-top: 40px;
+    width: 46.675%;
+  }
+  .container .desktop figure img, .container .tablet figure img, .container .mobile figure img {
+    height: 110px;
+    margin-top: 15px;
+    width: auto;
+  }
+  .container p {
+    display: none;
+  }
+  /*footer*/
+  .copyright, .desenvolvedor {
+    float: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .desenvolvedor figure {
+    width: inherit;
+  }
+}
+/*320px - TELAS PEQUENAS DE SMARTPHONE
+**********************************************************************/
+@media screen and (max-width: 320px) {
+  /*cores dos links e h2*/
+  h2, a a:link, a:visited {
+    color: #79E1D5;
+  }
+  a:hover {
+    color: #2FD0BC;
+  }
+  /* menu nav */
+  nav li {
+    background-color: #79E1D5;
+  }
+  nav li a:link {
+    color: #555;
+  }
+  nav li a.ativo:link, nav li a:hover, nav li a:visited {
+    background-color: #2FD0BC;
+    color: #fff;
+  }
+  nav li a.ativo:hover, nav li a.ativo:visited {
+    background-color: #2FD0BC;
+  }
+  /*chamada*/
+  .chamada {
+    height: 130px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 1.21111111111em; /* 20px / 18px */
+    margin-bottom: 15px;
+  }
+  .chamada h3 {
+    font-size: 0.77777777778em /* 14px / 18px */
+  }
+  /*container*/
+  .container {
+    margin-top: 60px;
+  }
+  .container .desktop, .container .tablet, .container .mobile {
+    float: none;
+    height: 160px;
+    width: 100%;
+  }
+  .container .desktop figure, .container .tablet figure, .container .mobile figure {
+    float: left;
+    width: 100%;
+  }
+  .container h3, .container p {
+    display: none;
+  }
+}
+
+
+
+
+.
